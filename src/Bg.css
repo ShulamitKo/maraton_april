@@ -9,7 +9,6 @@
     box-shadow: 1px 1px 24px #111111;
     position: relative;
 }
-
 .close_img{
     position: absolute;
     top: 21px;
@@ -23,7 +22,6 @@
     margin-right: 16px;
     font-family: Aduma;
 }
-
 .upload_btn{
     background-color: #475366;
     border: 0;
@@ -40,7 +38,6 @@
     text-align: right;
     padding-right: 19px;
 }
-
 .upload_text{
     color: #ffffff94;
     position: absolute;
@@ -48,39 +45,32 @@
     font-size: 12px;
     direction: rtl;
 }
-
 .right_div{
     height: 510px;
     width: 30%;
     background-color: #2F3A4B;
     border-radius: 10px;
 }
-
 .left_div{
     height: 510px;
     width: 66%;
     background-color: #2F3A4B;
     border-radius: 10px;
 }
-
 .middle_div{
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-evenly;
     margin-top: 38px;
 }
-
 .right_div_inner, .left_div_inner{
     background-color: #161B21;
     height: 410px;
     margin-top: 50px;
 }
-
 .left_div_footer{
     position: relative;
 }
-
-
 .takanon_btn{
     background-color: #475366;
     border: 0;
@@ -96,6 +86,7 @@
     background-position: 21px 9px;
     text-align: right;
     padding-right: 19px;
+    cursor: pointer;
 }
 
 .takanon_text{
@@ -107,26 +98,21 @@
     top: 19px;
     right: 10px;
 }
-
-
 .footer_cont{
     position: relative;
 }
-
 .footer_logo{
     position: absolute;
     top: 31px;
     left: 41px;
     width: 150px;
 }
-
 .footer_banner{
     position: absolute;
     right: 20px;
     top: 22px;
     width: 664px;
 }
-
 .tabs_cont{
     position: absolute;
     display: flex;
@@ -134,7 +120,6 @@
     width: 65%;
     padding-top: 12px;
 }
-
 .tab{
     color: white;
     width: 100px;
@@ -146,4 +131,12 @@
 
 .selected_tab{
     border-bottom: 3px solid #9C27B0;
+}
+
+.layout{
+    background-color: #000000ad;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
 }
