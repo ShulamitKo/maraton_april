@@ -24,7 +24,7 @@ function No_bg(props) {
             </>
         : <></>}
 
-        
+        {props.img_name?<img className="uploaded_img" src={'http://localhost:5000/'+props.img_name} />: <></>}
 
 </div>
     );
