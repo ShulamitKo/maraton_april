@@ -21,6 +21,8 @@ function Bg() {
   const [show_err_msg, setshow_err_msg] = useState(false);
   const [show_err_msg_size, setshow_err_msg_size] = useState(false);
   const [image_name, setimage_name] = useState('');
+  const [bg_color, setbg_color] = useState('green');
+
 
   function choose_tab(){
     setselected_tab(!selected_tab);
@@ -62,12 +64,15 @@ function Bg() {
      //formData.append('name', 'ABC');   //append the values with key, value pair
     // formData.append('age', 20);
 
+    
     if(file_info.size<=1000000) {
       debugger;
       if(file_info.type=='image/png' || file_info.type=='image/jpeg' || file_info.type=='image/jpg'){
         let formData = new FormData();   
 
         formData.append('file',file_info);
+        formData.append('color', bg_color);
+
 
           const config = {     
               headers: { 'content-type': 'multipart/form-data' }
@@ -91,6 +96,10 @@ function Bg() {
       setshow_err_msg_size(true);
     }
  }
+ function save_color_func(color){
+  setbg_color(color);
+}
+
   return (
     <>
     <div className='bg_general'>
@@ -119,8 +128,9 @@ function Bg() {
 
               
               <div className='left_div_inner'>
-              {selected_tab? <No_bg img_name={image_name} title="no_bg"></No_bg> :
-              <No_bg img_name={image_name} title="original"></No_bg>}
+              {selected_tab? 
+                <No_bg save_color_func={save_color_func} img_name={image_name} title="no_bg"></No_bg> :
+                <No_bg img_name={image_name} title="original"></No_bg>}
                     
 
               </div>
@@ -146,7 +156,7 @@ function Bg() {
     
   {show_download_popup? <>
   <div className='layout'> </div>
-  <Download_popup close_pupup_func={close_pupup_func} > </Download_popup></>: <></>}
+  <Download_popup  img_name={image_name}  close_pupup_func={close_pupup_func}> </Download_popup></>: <></>}
 
   {show_eula_popup? <>
   <div className='layout'> </div>

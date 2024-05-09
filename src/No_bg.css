@@ -8,6 +8,11 @@
     right: 0;
 }
 
+.uploaded_img{
+    width: 100%;
+    margin-top: 73px;
+}
+
 
 .no_bg_cont{
     position: relative;
@@ -36,4 +41,15 @@
     position: absolute;
     top: 19px;
     left: 15px;
+}
+
+.span_color{
+    background-color: green;
+    width: 26px;
+    height: 29px;
+    position: absolute;
+    top: 0px;
+    right: -1px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
 }
